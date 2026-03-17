@@ -8,6 +8,8 @@ ${SEARCH_INPUT}      name:search_query
 ${SEARCH_BUTTON}     css:button[aria-label="Search"]
 ${CLEAR_BUTTON}    css:.ytSearchboxComponentClearButtonWrapper button[aria-label="Clear search query"]
 ${VOICE_BUTTON}    id:voice-search-button
+${TOOL_BUTTON}    css:button[id="button"][aria-label="Settings"]
+${SETTINGS_MENU}    css:tp-yt-iron-dropdown
 *** Test Cases ***
 TestHeaderIcon
     [Documentation]    Test header UI youtube
@@ -16,9 +18,10 @@ TestHeaderIcon
     Element Should Be Visible     ${LOGO_ICON}    id:youtube-paths_yt10
     Element Should Be Visible     ${SEARCH_BOX}
     Element Should Be Visible     ${VOICE_BUTTON}
+    Element Should Be Visible     ${TOOL_BUTTON}
+    Element Should Not Be Visible    ${SETTINGS_MENU}
     Sleep    5s
 
-*** Test Cases ***
 TestSearch
     [Documentation]    Test UI and click search
     Open Web
@@ -29,3 +32,17 @@ TestSearch
     Page Should Contain    robot
     Element Should Be Visible    ${CLEAR_BUTTON}
     Sleep    5s
+
+TestSearchVoice
+    [Documentation]    Test voice search UI
+    Open Web
+    Click Element    ${VOICE_BUTTON}
+    Sleep    3s
+    Page Should Contain    microphone
+
+TestClickTooltip
+    [Documentation]    Test click tooltip
+    Open Web
+     Click Element    ${TOOL_BUTTON}
+    Wait Until Element Is Visible    ${SETTINGS_MENU}    5s
+     Element Should Be Visible    ${SETTINGS_MENU}
