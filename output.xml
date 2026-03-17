@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.4.2 (Python 3.12.8 on win32)" generated="2026-03-17T16:16:13.342169" rpa="false" schemaversion="5">
+<suite id="s1" name="Hang Robot Test" source="C:\Users\Public\hằng\hang_robot_test">
+<suite id="s1-s1" name="TestCase" source="C:\Users\Public\hằng\hang_robot_test\TestCase">
+<suite id="s1-s1-s1" name="Test Ybt Example" source="C:\Users\Public\hằng\hang_robot_test\TestCase\test_ybt_example">
+<suite id="s1-s1-s1-s1" name="Header" source="C:\Users\Public\hằng\hang_robot_test\TestCase\test_ybt_example\header">
+<suite id="s1-s1-s1-s1-s1" name="HeaderTest" source="C:\Users\Public\hằng\hang_robot_test\TestCase\test_ybt_example\header\HeaderTest.robot">
+<test id="s1-s1-s1-s1-s1-t1" name="TestHeaderIcon" line="12">
+<kw name="Open Web" owner="Common">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2026-03-17T16:16:13.568149" level="INFO">Opening browser 'chrome' to base url 'https://www.youtube.com/'.</msg>
+<arg>${URL}</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2026-03-17T16:16:13.568149" elapsed="3.566545"/>
+</kw>
+<doc>Open 1 web với địa chỉ cụ thể trên trình duyệt example: open browser Chrome, truy cập tới trang google.com</doc>
+<status status="PASS" start="2026-03-17T16:16:13.568149" elapsed="3.566545"/>
+</kw>
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2026-03-17T16:16:17.167791" level="INFO">Element 'id:logo-icon' is displayed.</msg>
+<arg>${LOGO_ICON}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2026-03-17T16:16:17.135762" elapsed="0.032029"/>
+</kw>
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2026-03-17T16:16:17.197084" level="INFO">Element 'id:logo-icon' is displayed.</msg>
+<arg>${LOGO_ICON}</arg>
+<arg>id:youtube-paths_yt10</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2026-03-17T16:16:17.167791" elapsed="0.029293"/>
+</kw>
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2026-03-17T16:16:17.211750" level="INFO">Element 'css:yt-searchbox[role="search"]' is displayed.</msg>
+<arg>${SEARCH_BOX}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2026-03-17T16:16:17.197084" elapsed="0.016036"/>
+</kw>
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2026-03-17T16:16:17.229084" level="INFO">Element 'id:voice-search-button' is displayed.</msg>
+<arg>${VOICE_BUTTON}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2026-03-17T16:16:17.213120" elapsed="0.015964"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-03-17T16:16:22.230183" level="INFO">Slept 5 seconds.</msg>
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2026-03-17T16:16:17.230087" elapsed="5.000096"/>
+</kw>
+<doc>Test header UI youtube</doc>
+<status status="PASS" start="2026-03-17T16:16:13.568149" elapsed="8.663118"/>
+</test>
+<status status="PASS" start="2026-03-17T16:16:13.390191" elapsed="8.843091"/>
+</suite>
+<status status="PASS" start="2026-03-17T16:16:13.390191" elapsed="8.847155"/>
+</suite>
+<status status="PASS" start="2026-03-17T16:16:13.390191" elapsed="8.849312"/>
+</suite>
+<status status="PASS" start="2026-03-17T16:16:13.390191" elapsed="8.852560"/>
+</suite>
+<status status="PASS" start="2026-03-17T16:16:13.347613" elapsed="8.896147"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Hang Robot Test" id="s1" pass="1" fail="0" skip="0">Hang Robot Test</stat>
+<stat name="TestCase" id="s1-s1" pass="1" fail="0" skip="0">Hang Robot Test.TestCase</stat>
+<stat name="Test Ybt Example" id="s1-s1-s1" pass="1" fail="0" skip="0">Hang Robot Test.TestCase.Test Ybt Example</stat>
+<stat name="Header" id="s1-s1-s1-s1" pass="1" fail="0" skip="0">Hang Robot Test.TestCase.Test Ybt Example.Header</stat>
+<stat name="HeaderTest" id="s1-s1-s1-s1-s1" pass="1" fail="0" skip="0">Hang Robot Test.TestCase.Test Ybt Example.Header.HeaderTest</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
