@@ -1,52 +1,51 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.4.2 (Python 3.12.8 on win32)" generated="2026-03-17T17:15:56.422677" rpa="false" schemaversion="5">
+<robot generator="Robot 7.4.2 (Python 3.12.8 on win32)" generated="2026-03-18T08:36:00.874720" rpa="false" schemaversion="5">
 <suite id="s1" name="Hang Robot Test" source="C:\Users\Public\hằng\hang_robot_test">
 <suite id="s1-s1" name="TestCase" source="C:\Users\Public\hằng\hang_robot_test\TestCase">
 <suite id="s1-s1-s1" name="Test Ybt Example" source="C:\Users\Public\hằng\hang_robot_test\TestCase\test_ybt_example">
 <suite id="s1-s1-s1-s1" name="Header" source="C:\Users\Public\hằng\hang_robot_test\TestCase\test_ybt_example\header">
 <suite id="s1-s1-s1-s1-s1" name="HeaderTest" source="C:\Users\Public\hằng\hang_robot_test\TestCase\test_ybt_example\header\HeaderTest.robot">
-<test id="s1-s1-s1-s1-s1-t1" name="TestClickTooltip" line="43">
+<test id="s1-s1-s1-s1-s1-t1" name="CheckClickGuideIcon" line="68">
 <kw name="Open Web" owner="Common">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2026-03-17T17:15:56.676996" level="INFO">Opening browser 'chrome' to base url 'https://www.youtube.com/'.</msg>
+<msg time="2026-03-18T08:36:01.100354" level="INFO">Opening browser 'chrome' to base url 'https://www.youtube.com/'.</msg>
 <arg>${URL}</arg>
 <arg>chrome</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2026-03-17T17:15:56.676996" elapsed="7.247035"/>
+<status status="PASS" start="2026-03-18T08:36:01.100354" elapsed="3.308224"/>
 </kw>
 <doc>Open 1 web với địa chỉ cụ thể trên trình duyệt example: open browser Chrome, truy cập tới trang google.com</doc>
-<status status="PASS" start="2026-03-17T17:15:56.676996" elapsed="7.250751"/>
+<status status="PASS" start="2026-03-18T08:36:01.100354" elapsed="3.309250"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2026-03-17T17:16:03.930022" level="INFO">Clicking element 'css:button[id="button"][aria-label="Settings"]'.</msg>
-<arg>${TOOL_BUTTON}</arg>
+<msg time="2026-03-18T08:36:04.409604" level="INFO">Clicking element 'id:guide-button'.</msg>
+<arg>${MENU_BUTTON}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-03-17T17:16:03.928751" elapsed="0.151066"/>
+<status status="PASS" start="2026-03-18T08:36:04.409604" elapsed="0.415299"/>
 </kw>
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${SETTINGS_MENU}</arg>
+<arg>${MENU_BUTTON}</arg>
 <arg>5s</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2026-03-17T17:16:04.080812" elapsed="0.035724"/>
+<status status="PASS" start="2026-03-18T08:36:04.825966" elapsed="0.207358"/>
 </kw>
 <kw name="Element Should Be Visible" owner="SeleniumLibrary">
-<msg time="2026-03-17T17:16:04.128099" level="INFO">Element 'css:tp-yt-iron-dropdown' is displayed.</msg>
-<arg>${SETTINGS_MENU}</arg>
+<msg time="2026-03-18T08:36:05.074618" level="INFO">Element 'id:guide-inner-content' is displayed.</msg>
+<arg>${GUIDE_INNER}</arg>
 <doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<status status="PASS" start="2026-03-17T17:16:04.117581" elapsed="0.010518"/>
+<status status="PASS" start="2026-03-18T08:36:05.033324" elapsed="0.042294"/>
 </kw>
-<doc>Test click tooltip</doc>
-<status status="PASS" start="2026-03-17T17:15:56.676996" elapsed="7.452102"/>
+<status status="PASS" start="2026-03-18T08:36:01.100354" elapsed="3.975264"/>
 </test>
-<status status="PASS" start="2026-03-17T17:15:56.470342" elapsed="7.660019"/>
+<status status="PASS" start="2026-03-18T08:36:00.918082" elapsed="4.158705"/>
 </suite>
-<status status="PASS" start="2026-03-17T17:15:56.470342" elapsed="7.661148"/>
+<status status="PASS" start="2026-03-18T08:36:00.918082" elapsed="4.160899"/>
 </suite>
-<status status="PASS" start="2026-03-17T17:15:56.470342" elapsed="7.662150"/>
+<status status="PASS" start="2026-03-18T08:36:00.907635" elapsed="4.172395"/>
 </suite>
-<status status="PASS" start="2026-03-17T17:15:56.470342" elapsed="7.663149"/>
+<status status="PASS" start="2026-03-18T08:36:00.907635" elapsed="4.173392"/>
 </suite>
-<status status="PASS" start="2026-03-17T17:15:56.422677" elapsed="7.712223"/>
+<status status="PASS" start="2026-03-18T08:36:00.874720" elapsed="4.208429"/>
 </suite>
 <statistics>
 <total>

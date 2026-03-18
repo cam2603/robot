@@ -2,6 +2,7 @@
 
 Resource    ../../../Resource/Common.resource
 *** Variables ***
+${MENU_BUTTON}       id:guide-button
 ${LOGO_ICON}       id:logo-icon
 ${SEARCH_BOX}       css:yt-searchbox[role="search"]
 ${SEARCH_INPUT}      name:search_query
@@ -10,16 +11,22 @@ ${CLEAR_BUTTON}    css:.ytSearchboxComponentClearButtonWrapper button[aria-label
 ${VOICE_BUTTON}    id:voice-search-button
 ${TOOL_BUTTON}    css:button[id="button"][aria-label="Settings"]
 ${SETTINGS_MENU}    css:tp-yt-iron-dropdown
+${SIGN_IN_BUTTON}    css:a[aria-label="Sign in"]
+${ACCOUNT_AVATAR}    css:button#avatar-btn
+${GUIDE_INNER}    id:guide-inner-content
+
 *** Test Cases ***
 TestHeaderIcon
     [Documentation]    Test header UI youtube
     Open Web
+    Element Should Be Visible     ${MENU_BUTTON}
     Element Should Be Visible     ${LOGO_ICON}
     Element Should Be Visible     ${LOGO_ICON}    id:youtube-paths_yt10
     Element Should Be Visible     ${SEARCH_BOX}
     Element Should Be Visible     ${VOICE_BUTTON}
     Element Should Be Visible     ${TOOL_BUTTON}
     Element Should Not Be Visible    ${SETTINGS_MENU}
+    Element Should Not Be Visible    ${GUIDE_INNER}
     Sleep    5s
 
 TestSearch
@@ -43,6 +50,23 @@ TestSearchVoice
 TestClickTooltip
     [Documentation]    Test click tooltip
     Open Web
-     Click Element    ${TOOL_BUTTON}
+    Click Element    ${TOOL_BUTTON}
     Wait Until Element Is Visible    ${SETTINGS_MENU}    5s
-     Element Should Be Visible    ${SETTINGS_MENU}
+    Element Should Be Visible    ${SETTINGS_MENU}
+CheckLoginState
+    Open Web
+
+    ${login_status}=    Run Keyword And Return Status
+    ...    Element Should Be Visible    ${ACCOUNT_AVATAR}
+
+    IF    ${login_status}
+        Log    User already logged in
+    ELSE
+        Log    User not logged in
+    END
+    
+CheckClickGuideIcon
+    Open Web
+    Click Element    ${MENU_BUTTON}
+    Wait Until Element Is Visible    ${MENU_BUTTON}    5s
+    Element Should Be Visible    ${GUIDE_INNER}
