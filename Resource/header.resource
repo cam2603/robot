@@ -24,3 +24,14 @@ TestSearch
     Wait Until Page Contains    ${keyword}    10s
     Element Should Be Visible    ${CLEAR_BUTTON}
     Sleep    5s
+
+TestSearhAndOpenVideo
+    [Arguments]  ${keyword}
+    Click Element    ${SEARCH_INPUT}
+    Input Text     ${SEARCH_INPUT}    ${keyword}
+    Press Keys    ${SEARCH_INPUT}    ENTER
+    Wait Until Element Is Visible    xpath=//a[@id='video-title']    10s
+    ${video}=  Get WebElements     xpath=//a[@id='video-title']
+    ${count}=  Get Length    ${video}
+    ${index}=     Evaluate    random.randint(0, ${count}-1)    modules=random
+    Click Element    ${video}[${index}]

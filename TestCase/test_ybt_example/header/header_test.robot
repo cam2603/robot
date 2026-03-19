@@ -1,5 +1,7 @@
 *** Settings ***
 Resource    ../../../Resource/Common.resource
+Suite Setup       Test-precondition
+Suite Teardown    Test-postCondition
 
 *** Test Cases ***
 TestHeaderIcon

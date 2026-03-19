@@ -1,7 +1,7 @@
 *** Settings ***
-Library    SeleniumLibrary
 Library    DateTime
 Resource   header.resource
+Resource   setupVideo.resource
 
 *** Variables ***
 ${URL}  https://www.youtube.com/

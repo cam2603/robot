@@ -6,8 +6,12 @@ Resource   ../../../Resource/Common.resource
 *** Variables ***
 ${SEARCH_FILE}    C:/Users/Public/hằng/hang_robot_test/TestCase/DBFile/text_search_file.txt
 
+
+
 *** Test Cases ***
 TestSearchLoop
+    [Setup]    Test-precondition
+    [Teardown]    Test-postCondition
     [Documentation]    Test search with multiple keywords
     Open Web
 
