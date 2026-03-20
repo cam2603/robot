@@ -1,5 +1,6 @@
 *** Settings ***
 Library    SeleniumLibrary
+Resource    Common.resource
 Library    DateTime
 *** Variables ***
 ${MENU_BUTTON}       id:guide-button
@@ -35,3 +36,16 @@ TestSearhAndOpenVideo
     ${count}=  Get Length    ${video}
     ${index}=     Evaluate    random.randint(0, ${count}-1)    modules=random
     Click Element    ${video}[${index}]
+CheckLoginAndSetAction
+    [Arguments]     ${function}
+    Open Web
+
+    ${login_status}=    Run Keyword And Return Status
+    ...    Element Should Be Visible    ${ACCOUNT_AVATAR}
+
+    IF    ${login_status}
+        Run Keyword    ${function}
+        Log    User already logged in
+    ELSE
+        Log    User not logged in
+    END
